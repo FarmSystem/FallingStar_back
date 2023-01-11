@@ -1,13 +1,13 @@
-package farm.back;
+package login_test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackApplication {
+public class LoginTestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackApplication.class, args);
+		SpringApplication.run(LoginTestApplication.class, args);
 	}
 
 }
