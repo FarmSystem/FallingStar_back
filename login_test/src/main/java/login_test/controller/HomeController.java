@@ -12,17 +12,17 @@ import javax.servlet.http.HttpSession;
 @RestController
 public class HomeController {
 
-    @GetMapping("/home") // 이게 url 주소 써놓은거라고 보면 됨 localhost:8080/home
+    @GetMapping("/home")
     public String home(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
 
         if (session == null) {
-            return "hello, stranger";
+            return "안녕하세요, 손님";
         }
 
         Member loginMember = (Member)session.getAttribute("loginMember");
 
-        return "hello, " + loginMember.getName(); // 반갑습니다 이도윤님
+        return "안녕하세요, " + loginMember.getName() + "님";
     }
 
 }

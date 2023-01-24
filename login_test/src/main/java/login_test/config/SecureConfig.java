@@ -24,6 +24,13 @@ public class SecureConfig {
                 .antMatchers("/home").permitAll()
                 .antMatchers("/signup").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/api/hello").permitAll()
+                .antMatchers("/api/User").permitAll()
+                .antMatchers("/api").permitAll()
+                .antMatchers("/api/User/1").permitAll()
+                .antMatchers("/api/User/2").permitAll()
+                .antMatchers("/api/User/3").permitAll()
+                .antMatchers("/api/User/4").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .logout()
@@ -36,3 +43,4 @@ public class SecureConfig {
         return http.build();
     }
 }
+

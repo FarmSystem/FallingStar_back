@@ -29,13 +29,10 @@ public class MemberController {
 
         Member member = new Member();
         member.setEmail(form.getEmail());
-        member.setPassword(form.getPassword());
         member.setName(form.getName());
+        member.setPassword(form.getPassword());
+        member.setPhonenumber(form.getPhonenumber());
         member.setBirth(form.getBirth());
-        member.setSex(form.getSex());
-        member.setUniversity(form.getUniversity());
-        member.setOneLineIntroduction(form.getOneLineIntroduction());
-        member.setTermConsent(form.getTermConsent());
 
         Long joinedId = memberService.join(member);
 
@@ -43,6 +40,7 @@ public class MemberController {
             return "signup fail";
         }
 
-        return "signup success";
+        return "hello " + member.getName() + " " + member.getEmail() + " " +  member.getPassword() + " " +
+                " " + member.getBirth() + " " +  member.getPhonenumber();
     }
 }
